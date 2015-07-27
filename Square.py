@@ -12,3 +12,5 @@ class Square(object):
 
     def remove_piece(self, piece):
     	self.piece = None
+
+    
