@@ -1,7 +1,13 @@
+from square import Square
+
 class Board(object):
     """
-    Docstring for board class
+    Board consists of 8x8 field of squares.
+    squares are indicaded with coordinates from a to
     """
+    squares = []
     def __init__(self):
-        for i in {0, 1, 2, 3, 4, 5, 6, 7, 8};
-                for j in {}
+        for x in range(8):
+            for y in range(8):
+                self.squares.Add(Square(x,y))
+
