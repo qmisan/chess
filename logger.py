@@ -7,7 +7,7 @@ def timestamp():
     return "[" + str(time.time()) + "]"
     
 def StartLine(string):
-    temp_string = self.timestamp() + "\t" + string
+    temp_string = timestamp() + "\t" + string
     f.write(temp_string)
 
 def ContinueLine(string):

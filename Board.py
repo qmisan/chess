@@ -1,4 +1,5 @@
 from square import Square
+import Logger
 
 class Board(object):
     """
@@ -17,24 +18,20 @@ class Board(object):
     Its easy to indicate what column and row squares are in
     """
 
-    squares = [64 * None]
+    squares = list()
 
     def __init__(self):
         # Initializes board which is 8x8 table of squares
         Logger.StartLine("Initializing squares...")
 
-        for index in range(63):
-            squares[index] = Square(int(index/8), index % 8)
+        for index in range(64):
+            self.squares.append(Square(int(index/8), index % 8))
         Logger.EndLine("done!")
 
     def print_to_console(self):
-        # Prints current state of board to console
-        for row in self.squares:
-            for square in row:
-                print(str(square))
-            print("\n")
-
-
-
-
-
+        string = ""
+        for i in range(len(self.squares)):
+            if(i % 8 == 0 and i != 0):
+                string += "\n"
+            string += str(self.squares[i])
+        print(string)
