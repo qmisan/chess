@@ -1,11 +1,21 @@
 import time
 
-class Logger(object):
-    def __init__(self, filepath):
-        f = open(filepath, "w")
+filepath = "log.txt"
+f = open(filepath,"a")
+
+def timestamp():
+    return "[" + str(time.time()) + "]"
+    
+def StartLine(string):
+    temp_string = self.timestamp() + "\t" + string
+    f.write(temp_string)
+
+def ContinueLine(string):
+    f.write(string)
+
+def EndLine(string):
+    f.write(string + "\n")
+
+def WriteLine(string):
+    f.write(timestamp() + "\t" + string + "\n")
         
-    def Info(string):
-        timestamp = "[" + time() + "]"
-        f.write(timestamp + "\t" + string + '\n')
-        if debug_mode = True
-            print(string)
