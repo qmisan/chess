@@ -1,3 +1,5 @@
+import Board
+
 class Game(object):
     """
     Docstring for board class

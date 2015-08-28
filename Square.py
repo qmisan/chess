@@ -9,7 +9,7 @@ class Square(object):
 
     def __init__(self, x, y):
         self.column = x
-    	self.row = y
+        self.row = y
 
     def __str__(self):
         if self.piece != None:
@@ -18,9 +18,9 @@ class Square(object):
             return "."
             
     def set_piece(self, piece):
-    	self.piece = piece
+        self.piece = piece
 
     def remove_piece(self, piece):
-    	self.piece = None
+        self.piece = None
 
     

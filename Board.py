@@ -1,5 +1,5 @@
-from square import Square
-import Logger
+from Square import Square
+import logging
 
 class Board(object):
     """
@@ -22,11 +22,11 @@ class Board(object):
 
     def __init__(self):
         # Initializes board which is 8x8 table of squares
-        Logger.StartLine("Initializing squares...")
+        logging.debug("Initializing squares...")
 
         for index in range(64):
             self.squares.append(Square(int(index/8), index % 8))
-        Logger.EndLine("done!")
+        logging.debug("done!")
 
     def print_to_console(self):
         string = ""
